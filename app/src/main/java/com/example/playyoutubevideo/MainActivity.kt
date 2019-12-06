@@ -22,7 +22,9 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("SetJavaScriptEnabled")
     private fun loadVideo(webView: WebView) {
 
-        val embedString = "<iframe  src=\"https://www.youtube.com/embed/5jJ-e278BFY\" frameborder=\"0\" allowfullscreen></iframe>"
+        val videoUrl = "https://www.youtube.com/embed/5jJ-e278BFY"
+
+        val embedString = "<iframe  src=\"$videoUrl\" frameborder=\"0\" allowfullscreen></iframe>"
         webView.webChromeClient = WebChromeClient()
         val webSettings = webView.settings
         webSettings.javaScriptEnabled = true
